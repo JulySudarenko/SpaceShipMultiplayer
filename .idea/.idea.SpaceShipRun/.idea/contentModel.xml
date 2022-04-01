@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Sudar1977\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Sudar1977\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SpaceShipRun.-791159527.00" t="ExcludeRecursive" />
+    <e p="D:\geekbrains.ru\Projects\Unity\SpaceShipRun" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="HeyBlairGames" t="Include">
+          <e p="PlanetTextureGenerator" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PlanetAsset.cs" t="Include" />
+              <e p="PlanetComponentEditor.cs" t="Include" />
+              <e p="PlanetNoiseGenerator.compute" t="Include" />
+              <e p="PlanetNoiseGenerator.cs" t="Include" />
+              <e p="PlanetNoisePerlin.cs" t="Include" />
+              <e p="PlanetNoiseWorley.cs" t="Include" />
+              <e p="PlanetPreviewWindow.cs" t="Include" />
+              <e p="PlanetTextureGenerator.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="PlanetParallaxSpecular.shader" t="Include" />
+              <e p="PlanetSpecular.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Character" t="Include">
+            <e p="CameraOrbit.cs" t="Include" />
+            <e p="ShipController.cs" t="Include" />
+          </e>
+          <e p="Data" t="Include">
+            <e p="SpaceShipSettings.cs" t="Include" />
+          </e>
+          <e p="Main" t="Include">
+            <e p="SettingsContainer.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+            <e p="SolarSystemNetworkManager.cs" t="Include" />
+          </e>
+          <e p="Mechanics" t="Include">
+            <e p="BulletManager.cs" t="Include" />
+            <e p="PlanetOrbit.cs" t="Include" />
+          </e>
+          <e p="Network" t="Include">
+            <e p="NetworkCameraVisibleChecker.cs" t="Include" />
+            <e p="NetworkMovableObject.cs" t="Include" />
+            <e p="SpawnPoint.cs" t="Include" />
+            <e p="UpdatePhase.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="PlayerLabel.cs" t="Include" />
+          </e>
+          <e p="Utilities" t="Include">
+            <e p="CameraExtension.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="SpaceShipRun.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
