@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Main;
 using Mechanics;
 using Network;
@@ -12,14 +13,12 @@ namespace Characters
     {
         [SerializeField] private Transform _cameraAttach;
         private CameraOrbit _cameraOrbit;
-        private PlayerLabel playerLabel;
+        private PlayerLabel _playerLabel;
         private float _shipSpeed;
         private Rigidbody _rigidbody;
 
         [SyncVar] private string _playerName;
-
-        [SyncEvent]
-        public event Action OnSomethingHappend;
+        //[SyncEvent] public event Action OnSomethingHappend;
 
         protected override float speed => _shipSpeed;
 
@@ -31,22 +30,22 @@ namespace Characters
 
         private void OnGUI()
         {
-            if (_cameraOrbit == null)            
+            if (_cameraOrbit == null)
                 return;
-            
-            _cameraOrbit.ShowPlayerLabels(playerLabel);
+
+            _cameraOrbit.ShowPlayerLabels(_playerLabel);
         }
 
         public override void OnStartAuthority()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            if (_rigidbody == null)            
+            if (_rigidbody == null)
                 return;
-            
+
             gameObject.name = _playerName;
             _cameraOrbit = FindObjectOfType<CameraOrbit>();
             _cameraOrbit.Initiate(_cameraAttach == null ? transform : _cameraAttach);
-            playerLabel = GetComponentInChildren<PlayerLabel>();
+            _playerLabel = GetComponentInChildren<PlayerLabel>();
             base.OnStartAuthority();
         }
 
@@ -74,8 +73,8 @@ namespace Characters
         protected override void HasAuthorityMovement()
         {
             var spaceShipSettings = SettingsContainer.Instance?.SpaceShipSettings;
-            if (spaceShipSettings == null)            
-                return;            
+            if (spaceShipSettings == null)
+                return;
 
             var isFaster = Input.GetKey(KeyCode.LeftShift);
             var speed = spaceShipSettings.ShipSpeed;
@@ -87,35 +86,95 @@ namespace Characters
             _cameraOrbit.SetFov(currentFov, spaceShipSettings.ChangeFovSpeed);
 
             var velocity = _cameraOrbit.transform.TransformDirection(Vector3.forward) * _shipSpeed;
-            _rigidbody.velocity = velocity * (_updatePhase == UpdatePhase.FixedUpdate ? Time.fixedDeltaTime : Time.deltaTime);
+            _rigidbody.velocity =
+                velocity * (_updatePhase == UpdatePhase.FixedUpdate ? Time.fixedDeltaTime : Time.deltaTime);
 
             if (!Input.GetKey(KeyCode.C))
             {
-                var targetRotation = Quaternion.LookRotation(Quaternion.AngleAxis(_cameraOrbit.LookAngle, -transform.right) * velocity);
+                var targetRotation =
+                    Quaternion.LookRotation(Quaternion.AngleAxis(_cameraOrbit.LookAngle, -transform.right) * velocity);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
             }
         }
 
-        protected override void FromServerUpdate() { }
-        protected override void SendToServer() { }
-
-        [Command]
-        private void CmdCommandMethod()
+        [Server]
+        private void OnTriggerEnter(Collider other)
         {
+            if (hasAuthority)
+                OnObjectHit();
+        }
 
+        private void OnObjectHit()
+        {
+            DestroySpaceShip();
+        }
+
+        private IEnumerable DestroySpaceShip()
+        {
+            DeactivatePlayer();
+            yield return new WaitForSeconds(5);
+            ActivatePlayer();
+        }
+
+        [Server]
+        private void DeactivatePlayer()
+        {
+            gameObject.SetActive(false);
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.isKinematic = true;
+            RpcDeactivatePlayer();
         }
 
         [ClientRpc]
-        private void RpcMethod(int value)
+        private void RpcDeactivatePlayer()
         {
-            _shipSpeed *= value;
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.isKinematic = true;
+            gameObject.SetActive(false);
         }
 
-        [Client]
-        private void ClientMethod()
+        [Server]
+        private void ActivatePlayer()
         {
-
+            var startPosition = NetworkManager.singleton.GetStartPosition();
+            transform.position = startPosition.position;
+            transform.rotation = startPosition.rotation;
+            gameObject.SetActive(true);
+            RpcActivatePlayer(startPosition.position, startPosition.rotation);
         }
+
+        [ClientRpc]
+        private void RpcActivatePlayer(Vector3 position, Quaternion rotation)
+        {
+            var objectTransform = transform;
+            objectTransform.position = position;
+            objectTransform.rotation = rotation;
+            gameObject.SetActive(true);
+        }
+
+        protected override void FromServerUpdate()
+        {
+        }
+
+        protected override void SendToServer()
+        {
+        }
+
+        // [Command]
+        // private void CmdCommandMethod()
+        // {
+        // }
+        //
+        // [ClientRpc]
+        // private void RpcMethod(int value)
+        // {
+        //     _shipSpeed *= value;
+        // }
+        //
+        // [Client]
+        // private void ClientMethod()
+        // {
+        // }
 
         [ClientCallback]
         private void LateUpdate()
@@ -126,32 +185,27 @@ namespace Characters
         [Server]
         private void ServerMethod()
         {
-
         }
 
         [ServerCallback]
         private void ServerCalbackMethod()
         {
-
         }
 
         [TargetRpc]
         private void RpcTargetMethod()
         {
-
         }
 
-        [ServerCallback]
-        public void OnTriggerEnter(Collider other)
-        {
-            if(hasAuthority)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
+        //[ServerCallback]
+        // public void OnTriggerEnter(Collider other)
+        // {
+        //     if (hasAuthority)
+        //     {
+        //     }
+        //     else
+        //     {
+        //     }
+        // }
     }
 }
