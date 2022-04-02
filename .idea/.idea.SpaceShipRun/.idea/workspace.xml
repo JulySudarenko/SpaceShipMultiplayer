@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0198d73a-b363-4bdb-a86f-d23fbf962143" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpaceShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpaceShip.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main/SolarSystemNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main/SolarSystemNetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/NetworkPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/NetworkPlayer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +35,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/b4/bfb35bdb/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.1.1/Runtime/NetworkServer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.1.1/Runtime/NetworkManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.1.1/Editor/WeaverRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/f2/a50ce978/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.1.1/Runtime/NetworkBuffer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/NetworkPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Main/SolarSystemNetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Main/SolarSystemNetworkManager.cs" />
       </list>
     </option>
   </component>
@@ -59,12 +60,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.349689" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2999309" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../!SaveBuild/SpaceShipRun\My project.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -73,10 +76,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13548">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13548" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -112,5 +115,75 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="421" height="464" key="DebuggerActiveHint" timestamp="1648911006367">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="421" height="464" key="DebuggerActiveHint/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911006367" />
+    <state width="1478" height="279" key="GridCell.Tab.0.bottom" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.0.center" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.0.left" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.0.right" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.1.bottom" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.1.center" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.1.left" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.1.right" timestamp="1648911692212">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692212" />
+    <state width="1478" height="279" key="GridCell.Tab.2.bottom" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.2.center" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.2.left" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.2.right" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.3.bottom" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.3.center" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.3.left" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
+    <state width="1478" height="279" key="GridCell.Tab.3.right" timestamp="1648911692213">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state width="1478" height="279" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1648911692213" />
   </component>
 </project>

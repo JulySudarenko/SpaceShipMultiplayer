@@ -720,9 +720,7 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
-  _nameInputPanel: {fileID: 760148259}
   _nameInputField: {fileID: 1251016676}
-  playerName: MyPlayer
 --- !u!114 &361298993
 MonoBehaviour:
   m_ObjectHideFlags: 0

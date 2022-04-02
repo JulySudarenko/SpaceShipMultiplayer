@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using System.Threading.Tasks;
 using Main;
 using Mechanics;
 using Network;
@@ -16,6 +16,7 @@ namespace Characters
         private PlayerLabel _playerLabel;
         private float _shipSpeed;
         private Rigidbody _rigidbody;
+        private bool _isDestroy;
 
         [SyncVar] private string _playerName;
         //[SyncEvent] public event Action OnSomethingHappend;
@@ -27,6 +28,12 @@ namespace Characters
             get => _playerName;
             set => _playerName = value;
         }
+
+        private void Start()
+        {
+            gameObject.name = _playerName;
+        }
+
 
         private void OnGUI()
         {
@@ -46,6 +53,8 @@ namespace Characters
             _cameraOrbit = FindObjectOfType<CameraOrbit>();
             _cameraOrbit.Initiate(_cameraAttach == null ? transform : _cameraAttach);
             _playerLabel = GetComponentInChildren<PlayerLabel>();
+
+            
             base.OnStartAuthority();
         }
 
@@ -95,30 +104,32 @@ namespace Characters
                     Quaternion.LookRotation(Quaternion.AngleAxis(_cameraOrbit.LookAngle, -transform.right) * velocity);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
             }
+
+            CmdCommandMethod();
+            RpcMethod(1);
         }
 
         [Server]
         private void OnTriggerEnter(Collider other)
         {
-            if (hasAuthority)
-                OnObjectHit();
+            if (hasAuthority && !_isDestroy)
+            {
+                Debug.Log("HIT");
+                HitHandle();
+            }
         }
 
-        private void OnObjectHit()
-        {
-            DestroySpaceShip();
-        }
-
-        private IEnumerable DestroySpaceShip()
+        private async void HitHandle()
         {
             DeactivatePlayer();
-            yield return new WaitForSeconds(5);
+            await Task.Delay(1000);
             ActivatePlayer();
         }
-
+        
         [Server]
         private void DeactivatePlayer()
         {
+            _isDestroy = true;
             gameObject.SetActive(false);
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.isKinematic = true;
@@ -150,6 +161,7 @@ namespace Characters
             objectTransform.position = position;
             objectTransform.rotation = rotation;
             gameObject.SetActive(true);
+            _isDestroy = false;
         }
 
         protected override void FromServerUpdate()
@@ -160,31 +172,23 @@ namespace Characters
         {
         }
 
-        // [Command]
-        // private void CmdCommandMethod()
-        // {
-        // }
-        //
-        // [ClientRpc]
-        // private void RpcMethod(int value)
-        // {
-        //     _shipSpeed *= value;
-        // }
-        //
-        // [Client]
-        // private void ClientMethod()
-        // {
-        // }
+        [Command]
+        private void CmdCommandMethod()
+        {
+            gameObject.name = _playerName;
+        }
+        
+        [ClientRpc]
+        private void RpcMethod(int value)
+        {
+            //_shipSpeed *= value;
+            gameObject.name = _playerName;
+        }
 
         [ClientCallback]
         private void LateUpdate()
         {
             _cameraOrbit?.CameraMovement();
-        }
-
-        [Server]
-        private void ServerMethod()
-        {
         }
 
         [ServerCallback]
@@ -197,15 +201,5 @@ namespace Characters
         {
         }
 
-        //[ServerCallback]
-        // public void OnTriggerEnter(Collider other)
-        // {
-        //     if (hasAuthority)
-        //     {
-        //     }
-        //     else
-        //     {
-        //     }
-        // }
     }
 }

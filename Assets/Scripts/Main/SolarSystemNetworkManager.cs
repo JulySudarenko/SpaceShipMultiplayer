@@ -10,66 +10,62 @@ namespace Main
     {
         [SerializeField] private InputField _nameInputField;
         private ShipController _shipController;
-        [SerializeField] private string playerName;
+        private string _playerName;
 
-       // private Dictionary<int, ShipController> _players = new Dictionary<int, ShipController>();
+        // private Dictionary<int, ShipController> _players = new Dictionary<int, ShipController>();
 
-        public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader message)
+        public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
         {
             var spawnTransform = GetStartPosition();
             var player = Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
             _shipController = player.GetComponent<ShipController>();
-            playerName = _nameInputField.text;
-            _shipController.PlayerName = $"Player{conn.connectionId}";;
+            _playerName = _nameInputField.text;
+            _shipController.PlayerName = _playerName;
             //_players.Add(conn.connectionId, _shipController);
-            
-            if (message != null)
-            {
-                playerName = message.ReadMessage<StringMessage>().value;
-                if (!string.IsNullOrEmpty(playerName))
-                {
-                    _shipController.PlayerName = playerName;
-                }
-            }
-            
+
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
 
-        // public override void OnStartServer()
-        // {
-        //     base.OnStartServer();
-        //
-        //     NetworkServer.RegisterHandler(100, ReceiveName);
-        // }
-        //
-        //
-        // public void ReceiveName(NetworkMessage networkMessage)
-        // {
-        //     //ShipController shipController = _players[networkMessage.conn.connectionId];
-        //     var nameMessage = networkMessage.ReadMessage<StringMessage>();
-        //     //shipController.PlayerName = nameMessage.value;
-        //     //_shipController.gameObject.name = nameMessage.value;
-        //     
-        //     if (networkMessage != null)
-        //     {
-        //         var playerName = networkMessage.ReadMessage<StringMessage>().value;
-        //         if (!string.IsNullOrEmpty(playerName))
-        //         {
-        //             _shipController.PlayerName = playerName;
-        //         }
-        //     }
-        // }
+        public override void OnStartServer()
+        {
+            base.OnStartServer();
+            
+            NetworkServer.RegisterHandler(100, ReceiveName);
+        }
+
+        public void ReceiveName(NetworkMessage networkMessage)
+        {
+            Debug.Log("Got message, size=" + networkMessage.reader.Length);
+            //var someValue = networkMessage.reader.ReadInt32();
+            var someString = networkMessage.reader.ReadString();
+            Debug.Log("Message value=" +  " Message string='" + someString + "'");
+            //ShipController shipController = _players[networkMessage.conn.connectionId];
+            //var nameMessage = networkMessage.ReadMessage<StringMessage>();
+            //shipController.PlayerName = nameMessage.value;
+            //_shipController.gameObject.name = nameMessage.value;
+        }
+
+        private void SendMessage(NetworkMessage netmsg)
+        {
+            NetworkWriter writer = new NetworkWriter();
+            writer.StartMessage(100);
+            writer.Write(42);
+            writer.Write("What is the answer");
+            writer.FinishMessage();
+            client.SendWriter(writer, 0);
+        }
 
         public override void OnClientConnect(NetworkConnection conn)
         {
-            //base.OnClientConnect(conn);
+            base.OnClientConnect(conn);
             var message = new StringMessage();
             message.value = _nameInputField.text;
-            //conn.Send(100, message);
- 
-            
-            ClientScene.AddPlayer(conn, 0, message);
+            conn.Send(100, message);
+            //ClientScene.AddPlayer(conn, 0, message);
+
+            client.RegisterHandler(100, SendMessage);
         }
+
         public override void OnClientSceneChanged(NetworkConnection conn)
         {
         }
