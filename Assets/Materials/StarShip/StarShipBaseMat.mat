@@ -98,8 +98,8 @@ Material:
     - _GlossMapScale: 0.894
     - _Glossiness: 0.739
     - _GlossyReflections: 1
-    - _Height: 3.7
-    - _Line: 2.9
+    - _Height: 50
+    - _Line: 0.5
     - _Metallic: 0.812
     - _MixValue: 0.445
     - _Mode: 0

@@ -22,12 +22,6 @@
     <list default="true" id="0198d73a-b363-4bdb-a86f-d23fbf962143" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeyBlairGames/PlanetTextureGenerator/Example/Example.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeyBlairGames/PlanetTextureGenerator/Example/Example.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Jupiter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Jupiter.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Solar.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Solar.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/StarShip/StarShipBaseMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/StarShip/StarShipBaseMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +47,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main/SolarSystemNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/PlanetShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/MyShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PlanetUnlitShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/PlanetShader.shader" />
       </list>
     </option>
   </component>
