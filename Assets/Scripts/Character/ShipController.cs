@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Threading.Tasks;
 using Main;
 using Mechanics;
@@ -19,7 +18,6 @@ namespace Characters
         private bool _isDestroy;
 
         [SyncVar] private string _playerName;
-        //[SyncEvent] public event Action OnSomethingHappend;
 
         protected override float speed => _shipSpeed;
 
@@ -181,7 +179,7 @@ namespace Characters
         [ClientRpc]
         private void RpcMethod(int value)
         {
-            //_shipSpeed *= value;
+            _shipSpeed *= value;
             gameObject.name = _playerName;
         }
 
@@ -190,16 +188,5 @@ namespace Characters
         {
             _cameraOrbit?.CameraMovement();
         }
-
-        [ServerCallback]
-        private void ServerCalbackMethod()
-        {
-        }
-
-        [TargetRpc]
-        private void RpcTargetMethod()
-        {
-        }
-
     }
 }
