@@ -57,9 +57,6 @@ namespace Main
             message.value = _nameInputField.text;
             conn.Send(100, message);
         }
-
-        public override void OnClientSceneChanged(NetworkConnection conn)
-        {
-        }
+        public override void OnClientSceneChanged(NetworkConnection conn) { }
     }
 }

@@ -26,13 +26,12 @@ namespace Characters
             get => _playerName;
             set => _playerName = value;
         }
-
+        
         private void Start()
         {
             gameObject.name = _playerName;
         }
-
-
+        
         private void OnGUI()
         {
             if (_cameraOrbit == null)
@@ -47,12 +46,10 @@ namespace Characters
             if (_rigidbody == null)
                 return;
 
-            gameObject.name = _playerName;
             _cameraOrbit = FindObjectOfType<CameraOrbit>();
             _cameraOrbit.Initiate(_cameraAttach == null ? transform : _cameraAttach);
             _playerLabel = GetComponentInChildren<PlayerLabel>();
 
-            
             base.OnStartAuthority();
         }
 
@@ -104,7 +101,7 @@ namespace Characters
             }
 
             CmdCommandMethod();
-            RpcMethod(1);
+            RpcMethod();
         }
 
         [Server]
@@ -123,7 +120,7 @@ namespace Characters
             await Task.Delay(1000);
             ActivatePlayer();
         }
-        
+
         [Server]
         private void DeactivatePlayer()
         {
@@ -162,24 +159,18 @@ namespace Characters
             _isDestroy = false;
         }
 
-        protected override void FromServerUpdate()
-        {
-        }
-
-        protected override void SendToServer()
-        {
-        }
+        protected override void FromServerUpdate() { }
+        protected override void SendToServer() { }
 
         [Command]
         private void CmdCommandMethod()
         {
             gameObject.name = _playerName;
         }
-        
+
         [ClientRpc]
-        private void RpcMethod(int value)
+        private void RpcMethod()
         {
-            _shipSpeed *= value;
             gameObject.name = _playerName;
         }
 
