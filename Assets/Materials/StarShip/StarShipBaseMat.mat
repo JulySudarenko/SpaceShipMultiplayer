@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StarShipBaseMat
-  m_Shader: {fileID: 4800000, guid: 559afa12b76ab8a44be348c43416abbf, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 916cfce1e792c46459d5e619f3c18db2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2988b06f141a73a4294a6bb8805b97fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -98,8 +98,8 @@ Material:
     - _GlossMapScale: 0.894
     - _Glossiness: 0.739
     - _GlossyReflections: 1
-    - _Height: 50
-    - _Line: 0.5
+    - _Height: 0
+    - _Line: 1
     - _Metallic: 0.812
     - _MixValue: 0.445
     - _Mode: 0
@@ -117,7 +117,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.7353569, g: 0.7353569, b: 0.7353569, a: 1}
-    - _Color: {r: 0.03137255, g: 0.82745105, b: 0.72156864, a: 1}
+    - _Color: {r: 0.49803925, g: 0.83921576, b: 0.9921569, a: 1}
     - _EmissionColor: {r: 0.12629052, g: 0.48277342, b: 0.8113208, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
