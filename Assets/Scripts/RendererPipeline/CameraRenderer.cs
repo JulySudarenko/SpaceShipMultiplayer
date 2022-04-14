@@ -2,14 +2,16 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Profiling;
 
 namespace RendererPipeline
 {
     partial class CameraRenderer
     {
         #if UNITY_EDITOR
-        private string _bufferName = "Camera Render";
-
+        
+        private string SampleName { get; set; }
+        
         private static readonly ShaderTagId[] _legacyShaderTagIds =
         {
             new ShaderTagId("Always"),
@@ -45,6 +47,7 @@ namespace RendererPipeline
                 ScriptableRenderContext.EmitWorldGeometryForSceneView(_camera);
             }
         }
+
         #endif
 
         partial void DrawUnsupportedShaders();
@@ -53,8 +56,8 @@ namespace RendererPipeline
 
     public partial class CameraRenderer
     {
-        private const string bufferName = "Camera Render";
-        private readonly CommandBuffer _commandBuffer = new CommandBuffer {name = bufferName};
+        private static string _bufferName = "Camera Render";
+        private CommandBuffer _commandBuffer;
 
         private ScriptableRenderContext _context;
         private Camera _camera;
@@ -71,7 +74,8 @@ namespace RendererPipeline
         {
             _camera = camera;
             _context = context;
-
+            _commandBuffer = new CommandBuffer {name = _camera.name};
+            
             DrawSceneUI();
 
             if (!Cull(out var parameters))
@@ -91,7 +95,7 @@ namespace RendererPipeline
             _cullingResult = _context.Cull(ref parameters);
             _context.SetupCameraProperties(_camera);
             _commandBuffer.ClearRenderTarget(true, true, Color.clear);
-            _commandBuffer.BeginSample(bufferName);
+            _commandBuffer.BeginSample(_camera.name);
             ExecuteCommandBuffer();
         }
 
@@ -118,7 +122,7 @@ namespace RendererPipeline
 
         private void Submit()
         {
-            _commandBuffer.EndSample(bufferName);
+            _commandBuffer.EndSample(_camera.name);
             ExecuteCommandBuffer();
             _context.Submit();
         }
