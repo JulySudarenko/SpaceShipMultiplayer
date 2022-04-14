@@ -48,6 +48,11 @@
             <e p="SpawnPoint.cs" t="Include" />
             <e p="UpdatePhase.cs" t="Include" />
           </e>
+          <e p="RendererPipeline" t="Include">
+            <e p="CameraRenderer.cs" t="Include" />
+            <e p="SpaceRunPipelineRender.cs" t="Include" />
+            <e p="SpaceRunPipelineRenderAsset.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="PlayerLabel.cs" t="Include" />
           </e>
