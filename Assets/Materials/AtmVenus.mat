@@ -56,8 +56,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Ambient: 0.27
-    - _AtmosphereSize: 1.03
+    - _Ambient: 0.62
+    - _AtmosphereSize: 1.09
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -65,7 +65,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensive: 1.54
+    - _Intensive: 0.35
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -76,7 +76,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AtmosphereColor: {r: 0.9056604, g: 0.40830073, b: 0.10679956, a: 1}
+    - _AtmosphereColor: {r: 0.745283, g: 0.63459104, b: 0.56599325, a: 0.19215687}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

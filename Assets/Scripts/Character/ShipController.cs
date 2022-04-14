@@ -26,12 +26,12 @@ namespace Characters
             get => _playerName;
             set => _playerName = value;
         }
-        
+
         private void Start()
         {
             gameObject.name = _playerName;
         }
-        
+
         private void OnGUI()
         {
             if (_cameraOrbit == null)
@@ -126,16 +126,12 @@ namespace Characters
         {
             _isDestroy = true;
             gameObject.SetActive(false);
-            _rigidbody.velocity = Vector3.zero;
-            _rigidbody.isKinematic = true;
             RpcDeactivatePlayer();
         }
 
         [ClientRpc]
         private void RpcDeactivatePlayer()
         {
-            _rigidbody.velocity = Vector3.zero;
-            _rigidbody.isKinematic = true;
             gameObject.SetActive(false);
         }
 
@@ -159,8 +155,13 @@ namespace Characters
             _isDestroy = false;
         }
 
-        protected override void FromServerUpdate() { }
-        protected override void SendToServer() { }
+        protected override void FromServerUpdate()
+        {
+        }
+
+        protected override void SendToServer()
+        {
+        }
 
         [Command]
         private void CmdCommandMethod()
@@ -181,5 +182,3 @@ namespace Characters
         }
     }
 }
-
-

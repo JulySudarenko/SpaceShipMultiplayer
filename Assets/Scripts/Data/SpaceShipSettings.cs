@@ -19,4 +19,8 @@ namespace Data
         [SerializeField, Range(.01f, 179)] private float fasterFov = 30;
         [SerializeField, Range(.1f, 5f)] private float changeFovSpeed = .5f;
     }
+
+    namespace CustomRenderPipeline
+    {
+    }
 }
