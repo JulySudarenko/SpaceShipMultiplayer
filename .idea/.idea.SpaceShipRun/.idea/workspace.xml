@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0198d73a-b363-4bdb-a86f-d23fbf962143" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Atmosphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Atmosphere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Earth.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Earth.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Material3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Material3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Solar.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Solar.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Star.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Star.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkCameraVisibleChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkCameraVisibleChecker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/SpaceRunPipelineRender.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ColorPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ColorPointDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkCameraVisibleChecker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ColorPointTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/Editor/ColorPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/ColorPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/ColorPointTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/Star.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/Crystal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/Editor/ColorPointDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stars/Editor/CrystalEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/ColorPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/ColorPointTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/ColorPointDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Crystal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/CrystalShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/CrystalEditor.cs" />
       </list>
     </option>
   </component>

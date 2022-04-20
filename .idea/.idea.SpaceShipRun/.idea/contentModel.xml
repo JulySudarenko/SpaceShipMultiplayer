@@ -30,6 +30,14 @@
             <e p="CameraOrbit.cs" t="Include" />
             <e p="ShipController.cs" t="Include" />
           </e>
+          <e p="Crystals" t="Include">
+            <e p="ColorPoint.cs" t="Include" />
+            <e p="Crystal.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ColorPointDrawer.cs" t="Include" />
+              <e p="CrystalEditor.cs" t="Include" />
+            </e>
+          </e>
           <e p="Data" t="Include">
             <e p="SpaceShipSettings.cs" t="Include" />
           </e>
@@ -61,6 +69,7 @@
           </e>
         </e>
         <e p="Shaders" t="Include">
+          <e p="CrystalShader.shader" t="Include" />
           <e p="MyShader.shader" t="Include" />
           <e p="PlanetSurfaceUnlitShader.shader" t="Include" />
           <e p="PlanetUnlitShader.shader" t="Include" />
