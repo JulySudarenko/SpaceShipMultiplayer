@@ -9,9 +9,7 @@ namespace RendererPipeline
     {
         #if UNITY_EDITOR
         
-        private string SampleName { get; set; }
-        
-        private static readonly ShaderTagId[] _legacyShaderTagIds =
+        private static readonly ShaderTagId[] LegacyShaderTagIds =
         {
             new ShaderTagId("Always"),
             new ShaderTagId("ForwardBase"),
@@ -22,17 +20,17 @@ namespace RendererPipeline
         };
 
 
-        private static Material _errorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
+        private static readonly Material ErrorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
 
         partial void DrawUnsupportedShaders()
         {
-            var drawingSettings = new DrawingSettings(_legacyShaderTagIds[0], new SortingSettings(_camera))
+            var drawingSettings = new DrawingSettings(LegacyShaderTagIds[0], new SortingSettings(_camera))
             {
-                overrideMaterial = _errorMaterial,
+                overrideMaterial = ErrorMaterial,
             };
-            for (var i = 1; i < _legacyShaderTagIds.Length; i++)
+            for (var i = 1; i < LegacyShaderTagIds.Length; i++)
             {
-                drawingSettings.SetShaderPassName(i, _legacyShaderTagIds[i]);
+                drawingSettings.SetShaderPassName(i, LegacyShaderTagIds[i]);
             }
 
             var filteringSettings = FilteringSettings.defaultValue;

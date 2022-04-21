@@ -20,22 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0198d73a-b363-4bdb-a86f-d23fbf962143" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Crystal1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Crystal1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/StarShip/MotorShaderMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/StarShip/MotorShaderMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/ShipController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/ColorPointDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ColorPointDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/ColorPointDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ColorPointDrawer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/CrystalEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CrystalEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/CrystalEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CrystalEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/CrystalShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/CrystalShader.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +72,6 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/CrustalSurfaceShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/SpaceShipRunMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/PlanetsMoverWindow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/PlanetsSystemCreatorWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/CrystalEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerLabel.cs" />
@@ -94,6 +80,7 @@
         <option value="$PROJECT_DIR$/Assets/Editor/SpaceShipRunMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/ColorPointDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/CrystalEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RendererPipeline/CameraRenderer.cs" />
       </list>
     </option>
   </component>
