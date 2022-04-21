@@ -1,4 +1,4 @@
-Shader "Unlit/UnlitCrystalShader"
+Shader "Crystal"
 {
     SubShader
     {

@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using Crystals;
+using UnityEditor;
 using UnityEngine;
 
-namespace Crystals.Editor
+namespace Editor
 {
     [CustomPropertyDrawer(typeof(ColorPoint))]
     public class ColorPointDrawer : PropertyDrawer
