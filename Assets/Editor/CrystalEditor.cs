@@ -76,9 +76,9 @@ namespace Editor
 
             foreach (var obj in targets)
             {
-                if (obj is Crystal crustal)
+                if (obj is Crystal crystal)
                 {
-                    crustal.UpdateMesh();
+                    crystal.UpdateMesh();
                 }
             }
         }

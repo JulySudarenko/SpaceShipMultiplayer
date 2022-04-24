@@ -102,7 +102,7 @@ namespace Characters
             }
 
             CmdCommandMethod();
-            RpcMethod();
+
         }
 
         [Server]
@@ -115,7 +115,7 @@ namespace Characters
             }
             else
             {
-                if (hasAuthority && !_isDestroy)
+                if (!_isDestroy)
                 {
                     Debug.Log("HIT");
                     HitHandle();
@@ -148,14 +148,14 @@ namespace Characters
         private void RpcDeactivateCrystal(GameObject crystal)
         {
             crystal.SetActive(false);
-            //RpcDeactivateCrystalPlayer(crystal);
+            RpcDeactivateCrystalPlayer(crystal);
         }
         
-        // [ClientRpc]
-        // private void RpcDeactivateCrystalPlayer(GameObject crystal)
-        // {
-        //     crystal.SetActive(false);
-        // }
+        [ClientRpc]
+        private void RpcDeactivateCrystalPlayer(GameObject crystal)
+        {
+            crystal.SetActive(false);
+        }
 
         [Server]
         private void ActivatePlayer()
@@ -189,6 +189,7 @@ namespace Characters
         private void CmdCommandMethod()
         {
             gameObject.name = _playerName;
+            RpcMethod();
         }
 
         [ClientRpc]

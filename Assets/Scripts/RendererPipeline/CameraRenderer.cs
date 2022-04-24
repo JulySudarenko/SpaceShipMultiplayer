@@ -53,7 +53,7 @@ namespace RendererPipeline
 
     public partial class CameraRenderer
     {
-        private static string _bufferName = "Camera Render";
+        public static string bufferName = "Camera Render";
         private CommandBuffer _commandBuffer;
 
         private ScriptableRenderContext _context;
