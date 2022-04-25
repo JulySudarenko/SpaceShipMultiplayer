@@ -20,45 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0198d73a-b363-4bdb-a86f-d23fbf962143" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShipRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlueStar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlueStar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crystal3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Earth.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Earth.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Jupiter.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Jupiter.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mars.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mars.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mercury.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mercury.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Neptune.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Neptune.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planet3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saturn.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saturn.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Solar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Solar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpaceShip.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpaceShip.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Uranus.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Uranus.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Venus.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Venus.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/PlanetsSystemCreatorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/PlanetsSystemCreatorWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Crystal3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Planet/Planet1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resouces/Prefabs/Planet/Planet1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mechanics/PlanetOrbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mechanics/PlanetOrbit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crystals/PlanetCharacteristics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crystals/PlanetCharacteristics.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +71,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/ColorPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/ColorPointTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/ColorPointDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Crystal.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/CrystalShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/CrustalSurfaceShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Editor/SpaceShipRunMenu.cs" />
@@ -117,8 +85,9 @@
         <option value="$PROJECT_DIR$/Assets/Editor/ColorPointDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/PlanetCharacteristicsDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/PlanetUnlitShader.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/PlanetCharacteristics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mechanics/PlanetOrbit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/PlanetCharacteristics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crystals/Crystal.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/PlanetsSystemCreatorWindow.cs" />
       </list>
     </option>

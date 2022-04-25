@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7317919077713159895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39, y: 0, z: 1875.9}
+  m_LocalPosition: {x: 466, y: 0, z: 1500}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aroundPoint: {fileID: 0}
   smoothTime: 0.3
-  circleInSecond: 0.001
+  circleInSecond: 0.0015
   offsetSin: 1
   offsetCos: 1
   rotationSpeed: 5
