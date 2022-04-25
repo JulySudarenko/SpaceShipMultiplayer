@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Crystals;
 using Main;
 using Mechanics;
 using Network;
@@ -101,16 +102,24 @@ namespace Characters
             }
 
             CmdCommandMethod();
-            RpcMethod();
+
         }
 
         [Server]
         private void OnTriggerEnter(Collider other)
         {
-            if (hasAuthority && !_isDestroy)
+            if (other.TryGetComponent(typeof(Crystal), out var crystal))
             {
-                Debug.Log("HIT");
-                HitHandle();
+                other.gameObject.SetActive(false);
+                RpcDeactivateCrystal(other.gameObject);
+            }
+            else
+            {
+                if (!_isDestroy)
+                {
+                    Debug.Log("HIT");
+                    HitHandle();
+                }
             }
         }
 
@@ -133,6 +142,19 @@ namespace Characters
         private void RpcDeactivatePlayer()
         {
             gameObject.SetActive(false);
+        }
+        
+        [Server]
+        private void RpcDeactivateCrystal(GameObject crystal)
+        {
+            crystal.SetActive(false);
+            RpcDeactivateCrystalPlayer(crystal);
+        }
+        
+        [ClientRpc]
+        private void RpcDeactivateCrystalPlayer(GameObject crystal)
+        {
+            crystal.SetActive(false);
         }
 
         [Server]
@@ -167,6 +189,7 @@ namespace Characters
         private void CmdCommandMethod()
         {
             gameObject.name = _playerName;
+            RpcMethod();
         }
 
         [ClientRpc]

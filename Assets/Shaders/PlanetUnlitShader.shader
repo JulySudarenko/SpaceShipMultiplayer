@@ -31,6 +31,7 @@ Shader "Unlit/PlanetUnlitShader"
             float _AtmosphereSize;
             float _Ambient;
             float _Intensive;
+            float4 _worldVertex;
 
             struct appdata
             {
@@ -54,7 +55,10 @@ Shader "Unlit/PlanetUnlitShader"
                 //Получаем вершинную нормаль в мировом пространстве
                 half3 worldNormal = UnityObjectToWorldNormal(v.normal);
                 //Точечный продукт между нормалью и направлением освещения standard diffuse (Lambert) lighting
-                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                //half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                _worldVertex = mul(unity_ObjectToWorld, v.vertex);
+                half nl = max(0, dot(worldNormal, normalize(_WorldSpaceCameraPos - _worldVertex)));
+
                 //Коэфициент светового цвета
                 o.diff = nl * _LightColor0;
                 //Информация освещения окр. среды и световых зондов в виде сферических гармоник

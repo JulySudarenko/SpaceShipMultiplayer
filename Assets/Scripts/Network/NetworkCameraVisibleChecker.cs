@@ -31,7 +31,7 @@ namespace Network
                 cam ??= Camera.current;
                 cameraIdentity ??= cam.GetComponent<NetworkIdentity>();
 
-                networkIdentity.RebuildObservers(false);    
+                networkIdentity.RebuildObservers(false);
             }
         }
 
@@ -44,6 +44,7 @@ namespace Network
         {
             return false;
         }
+
         public override void OnSetLocalVisibility(bool vis)
         {
             SetVis(gameObject, vis);
@@ -55,12 +56,12 @@ namespace Network
             {
                 r.enabled = vis;
             }
+
             for (int i = 0; i < go.transform.childCount; i++)
             {
                 var t = go.transform.GetChild(i);
                 SetVis(t.gameObject, vis);
             }
         }
-
     }
 }
