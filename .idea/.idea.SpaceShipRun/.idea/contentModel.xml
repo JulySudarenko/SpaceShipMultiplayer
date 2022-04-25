@@ -10,7 +10,6 @@
         <e p="Editor" t="Include">
           <e p="ColorPointDrawer.cs" t="Include" />
           <e p="CrystalEditor.cs" t="Include" />
-          <e p="PlanetCharacteristicsDrawer.cs" t="Include" />
           <e p="PlanetsSystemCreatorWindow.cs" t="Include" />
           <e p="SpaceShipRunMenu.cs" t="Include" />
         </e>

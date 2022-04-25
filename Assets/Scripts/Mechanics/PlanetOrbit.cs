@@ -1,3 +1,4 @@
+using Editor;
 using Network;
 using UnityEngine;
 
@@ -14,13 +15,19 @@ namespace Mechanics
         [SerializeField] private float offsetSin = 1;
         [SerializeField] private float offsetCos = 1;
         [SerializeField] private float rotationSpeed;
-
+        
         private float dist;
         private float currentAng;
         private Vector3 currentPositionSmoothVelocity;
         private float currentRotationAngle;
-
+        
         private const float circleRadians = Mathf.PI * 2;
+
+        public float CircleInSecond
+        {
+            get => circleInSecond;
+            set => circleInSecond = value;
+        }
 
         private void Start()
         {
@@ -80,5 +87,7 @@ namespace Mechanics
                 serverPosition, ref currentPositionSmoothVelocity, speed);
             transform.rotation = Quaternion.Euler(serverEuler);
         }
+        
+
     }
 }
